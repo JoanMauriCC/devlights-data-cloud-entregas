@@ -123,6 +123,11 @@ INSERT INTO pacientes_enfermedades (paciente_id, enfermedad_id, fecha_diagnostic
 
 -- INSERT INTO vehiculos (patente, modelo, conductor_id) VALUES ('AE000ZZ', 'Fiat Cronos', 1);
 
--- Error que devuelve Postgres:
--- ERROR:  duplicate key value violates unique constraint "vehiculos_conductor_id_key"
--- DETAIL:  Key (conductor_id)=(1) already exists.
+-- Error que devuelve Postgres: 
+-------------------------------------------------------------------------------------
+--ERROR:  duplicate key value violates unique constraint "vehiculos_conductor_id_key"
+--Key (conductor_id)=(1) already exists. 
+
+--Estado SQL: 23505
+--Detalle: Key (conductor_id)=(1) already exists.
+-------------------------------------------------------------------------------------
