@@ -18,7 +18,7 @@ SELECT p.nombre AS "proveedores", COUNT(pr.id) AS "cantidad_producto"
 FROM proveedores p
 LEFT JOIN productos pr ON pr.proveedor_id = p.id
 GROUP BY p.nombre
-ORDER BY p.nombre
+ORDER BY p.nombre;
 
 --Ejercicio 3
 --Mostrar las ventas que no tienen ningún producto cargado en venta_productos.
@@ -36,7 +36,7 @@ SELECT mp.nombre AS "metodo_pago", COUNT(v.id) AS "cantidad_ventas"
 FROM ventas v
 RIGHT JOIN metodos_pago mp ON v.metodo_pago_id = mp.id
 GROUP BY mp.nombre
-ORDER BY mp.nombre
+ORDER BY mp.nombre;
 
 -- ---------- FULL OUTER JOIN ----------
 
@@ -55,7 +55,7 @@ ORDER BY p.id;
 SELECT p.nombre AS "producto", p.precio AS "precio", mp.nombre AS "metodo_pago"
 FROM productos p
 CROSS JOIN metodos_pago mp 
-ORDER BY p.nombre, p.precio , mp.nombre
+ORDER BY p.nombre, p.precio , mp.nombre;
 
 --Respuesta: devuelve 336 filas.
 --El CROSS JOIN combina cada fila de productos con TODAS las filas de metodos_pago (producto cartesiano).
